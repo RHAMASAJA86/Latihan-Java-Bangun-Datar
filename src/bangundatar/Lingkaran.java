@@ -68,6 +68,11 @@ public class Lingkaran extends javax.swing.JFrame {
 
         btnHitung.setBackground(new java.awt.Color(204, 204, 204));
         btnHitung.setText("Hitung");
+        btnHitung.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHitungActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -132,10 +137,7 @@ public class Lingkaran extends javax.swing.JFrame {
 
     private void tJariJariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tJariJariActionPerformed
         // TODO add your handling code here:
-        double JariJari, Luas;
-        JariJari = Double.parseDouble(tJariJari.getText());
-        Luas = Math.PI * JariJari * JariJari;
-        tLuas.setText(String.valueOf(Luas));
+        
     }//GEN-LAST:event_tJariJariActionPerformed
 
     private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
@@ -143,6 +145,14 @@ public class Lingkaran extends javax.swing.JFrame {
         tJariJari.setText(null);
         tLuas.setText(null);
     }//GEN-LAST:event_btnResetActionPerformed
+
+    private void btnHitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungActionPerformed
+        // TODO add your handling code here:
+        double JariJari, Luas;
+        JariJari = Double.parseDouble(tJariJari.getText());
+        Luas = Math.PI * JariJari * JariJari;
+        tLuas.setText(String.valueOf(Luas));
+    }//GEN-LAST:event_btnHitungActionPerformed
 
     /**
      * @param args the command line arguments
